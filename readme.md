@@ -97,6 +97,13 @@ How helpful is rust compiler?
 - Example with vector
 - Example with print
 
+## Memory management
+Usually there are two ways to manage memory:
+- Garbage collection
+- Manual memory management
+
+And there is also a Rust way.
+
 ## The Borrow Checker
 Has two rules:
 - Data has one owner
@@ -127,5 +134,37 @@ isNaN(1 + null)      // false
 isNaN(1 + undefined) // true
 ```
 
+## Object oriented programming
+No classes just structs ...
+```rust
+struct Person {
+    name: String,
+    age: u8,
+}
+```
+... and traits:
+```rust
+trait is_signed {
+    fn is_signed(&self) -> bool;
+}
+
+impl is_signed for i32 {
+    fn is_signed(&self) -> bool {
+        return self < &0;
+    }
+}
+```
+
+
 ## Learning curve
 ![img_3.png](img_3.png)
+
+## Resources
+- Officlail site: https://www.rust-lang.org/
+- Book: https://doc.rust-lang.org/book/
+- Rustlings: https://github.com/rust-lang/rustlings
+- 30 minutes to learn Rust:https://fasterthanli.me/articles/a-half-hour-to-learn-rust
+- No boilerplate: https://www.youtube.com/@NoBoilerplate
+- Let's get rusty!: https://www.youtube.com/@letsgetrusty
+- Rust by example: https://doc.rust-lang.org/rust-by-example/
+- Rust Cookbook: https://rust-lang-nursery.github.io/rust-cookbook/
